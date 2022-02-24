@@ -82,6 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText3">
 
         <EditText
+            android:id="@+id/note"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
@@ -89,6 +90,7 @@
             android:hint="Izoh"
             android:inputType="textMultiLine"
             android:maxLines="5"
+            android:lines="5"
             android:padding="@dimen/_5sdp"
             android:textAlignment="gravity" />
     </com.google.android.material.card.MaterialCardView>
