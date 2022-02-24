@@ -186,8 +186,17 @@ public class QarzActivity extends AppCompatActivity implements View.OnClickListe
                 ism.setThreshold(1);
                 ism.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        getData( qarzList.get((Integer) adapterView.getItemAtPosition(i)));
+                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                        String selection = (String) adapterView.getItemAtPosition(position);
+                        int pos = -1;
+
+                        for (int i = 0; i < nameQarz.size(); i++) {
+                            if (nameQarz.get(i).equals(selection)) {
+                                pos = i;
+                                break;
+                            }
+                        }
+                        getData( qarzList.get(pos));
 
                     }
                 });
